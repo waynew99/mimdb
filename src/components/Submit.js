@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "../styles/SubmitPage.module.css";
 //import AddedText from "./FilmSubmission/AddedText";
 import OptionSelectCard from "./FilmSubmission/OptionSelectCard";
-import Select from "./FilmSubmission/Select";
+//import Select from "./FilmSubmission/Select";
 import TextArea from "./FilmSubmission/TextArea";
 //import { validateFilmSemester } from "../lib/frontend-utils";
 import TextInput from "./FilmSubmission/TextInput";
