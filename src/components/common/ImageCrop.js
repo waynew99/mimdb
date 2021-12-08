@@ -67,7 +67,7 @@ export default function ImageCrop({
           <div className={emptyStyle} />
         )}
           {(croppedImage) ? <img
-            className={styles.cropped_preview}
+            className={styles.cropped_preview + " noselect"}
             src={croppedImage}
             alt="cropped"
           /> : <div className={styles.image_background} />}
