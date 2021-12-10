@@ -1,4 +1,4 @@
-/*
+
 const fs = require("fs");
 
 exports.seed = async function (knex) {
@@ -101,4 +101,3 @@ exports.seed = async function (knex) {
   await knex("Backdrop").del();
   await knex.batchInsert("Backdrop", backdropMap, 100);
 };
-*/
