@@ -142,7 +142,7 @@ export async function getAllGenres() {
  *
  * @returns an array of all course names for all films in the database
  */
-export async function getAllCourses() {
+export async function getAllApprovedCourses() {
   const allCourseEntries = await knex.select("course_name")
     .from("Course")
     .whereBetween("approved_film_count", [1, 10000]);
@@ -154,7 +154,7 @@ export async function getAllCourses() {
  *
  * @returns an array of all course names for all films in the database
  */
- export async function getReallyAllCourses() {
+ export async function getAllCourses() {
   const allCourseEntries = await knex.select("course_name")
     .from("Course")
   return allCourseEntries.map((entry) => entry.course_name);

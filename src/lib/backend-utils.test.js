@@ -8,7 +8,7 @@ import {
     getGenres,
     getDirectors,
     getAllGenres,
-    getAllCourses,
+    getAllApprovedCourses,
     getAllFilms,
     getFilmById,
     getFilmBySlug,
@@ -74,8 +74,8 @@ describe("Tests of database Film Table utility functions", () => {
         expect(testAllGenres).toEqual(expect.arrayContaining(allGenres));
     });
 
-    test("getAllCourses: fetches all the courses", async () => {
-        const testAllCourses = await getAllCourses();
+    test("getAllApprovedCourses: fetches all the approved courses", async () => {
+        const testAllCourses = await getAllApprovedCourses();
 
         expect(testAllCourses.length).toBe(allCourses.length);
         expect(testAllCourses).toEqual(expect.arrayContaining(allCourses));
