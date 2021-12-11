@@ -3,7 +3,6 @@ import FilmController from "../components/DisplayLayouts/FilmController";
 import Layout from "../components/Layouts/Layout";
 
 import { useContext } from "react";
-
 import { DiscoverContext } from "../components/context/DiscoverContext";
 import { getLastTerm, convertTermToString } from "../lib/frontend-utils";
 

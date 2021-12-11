@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import FilmRow from "../../../components/DisplayLayouts/FilmRow";
-import Header from "../../../components/Header";
-import CustomHead from "../../../components/CustomHead";
+import Layout from "../../../components/Layouts/Layout";
 import useFilmsByCategory from "../../../hooks/useFilmsByCategory";
 
 export default function FilmsByGenre() {
@@ -12,15 +11,11 @@ export default function FilmsByGenre() {
   const genreName = decodeURIComponent(genre);
 
   return (
-    <div>
-      <CustomHead />
-      <Header/>
-      <main>
-        <div className="container">
-          <h1>{`${genreName}`} Films</h1>
-          <FilmRow films={useFilmsByCategory({category:"genre", value:genre})} />
-        </div>
-      </main>
-    </div>
+    <Layout>
+      <div className="container">
+        <h1>{`${genreName}`} Films</h1>
+        <FilmRow films={useFilmsByCategory({ category: "genre", value: genre })} />
+      </div>
+    </Layout>
   );
 }

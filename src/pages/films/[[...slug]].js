@@ -6,11 +6,11 @@ import useGetFilm from "../../hooks/useGetFilm";
 
 export default function Film() {
     const router = useRouter();
-    const {slug} = router.query;
+    const { slug } = router.query;
 
     return (
         <Layout>
-            <SingleFilmDisplay film={useGetFilm(slug)}/>
+            <SingleFilmDisplay film={useGetFilm(slug)} />
         </Layout>
     )
 }

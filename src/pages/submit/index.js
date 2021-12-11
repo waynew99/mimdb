@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { DirectorNameContext } from "../../components/context/DirectorNameContext";
-import CustomHead from "../../components/CustomHead";
-import Header from "../../components/Header";
+
+import Layout from "../../components/Layouts/Layout";
 import Submit from "../../components/Submit";
 
 import styles from "../../styles/Home.module.css";
-
 
 
 export default function SubmitPage() {
@@ -37,31 +36,25 @@ export default function SubmitPage() {
         body: JSON.stringify(content),
         headers: new Headers({ "Content-Type": "application/json" })
       });
-      let error=null;
+      let error = null;
       if (!response.ok) {
         error = new Error(response.statusText);
       }
 
-      return ({ok:response.ok, error});
+      return ({ ok: response.ok, error });
     }
     return await postSubmit();
   }
 
   const DirectorNameContextObject = { director_names: directorNames };
-  
+
   return (
     <div className={styles.container}>
-      <CustomHead />
-      <Header />
-      <main>
+      <Layout>
         <DirectorNameContext.Provider value={DirectorNameContextObject}>
-          <Submit allCourses={courses} complete={submitComplete}/>
+          <Submit allCourses={courses} complete={submitComplete} />
         </DirectorNameContext.Provider>
-      </main>
-
-      <footer>
-         © {`${new Date().getFullYear()}`} Middlebury Movie Database
-      </footer>
+      </Layout>
     </div>
   );
 }
