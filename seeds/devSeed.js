@@ -7,31 +7,31 @@ exports.seed = async function (knex) {
   const films = JSON.parse(filmContents);
   const processedFilms = films.map((film) => {
     return (({
-      backdrop_path,
+      backdropPath,
       title,
       id,
       slug,
       overview,
       logLine,
-      poster_path,
-      release_date,
+      posterPath,
+      releaseDate,
       term,
       video,
-      vimeo_id,
+      vimeoId,
       duration,
       approved
     }) => ({
-      backdrop_path,
+      backdropPath,
       title,
       id,
       slug,
       overview,
       logLine,
-      poster_path,
-      release_date,
+      posterPath,
+      releaseDate,
       term,
       video,
-      vimeo_id,
+      vimeoId,
       duration,
       approved
     }))(film);
@@ -62,22 +62,22 @@ exports.seed = async function (knex) {
 
   films.forEach((film) => {
     film.genre.forEach((genre) => {
-      genreMap.push({ film_id: film.id, genre_name: genre, approved: film.approved });
+      genreMap.push({ filmId: film.id, genreName: genre, approved: film.approved });
     });
     film.actors.forEach((name) => {
-      actorsMap.push({ film_id: film.id, actor_name: name });
+      actorsMap.push({ filmId: film.id, actorName: name });
     });
     film.contributors.forEach((name) => {
-      contributorsMap.push({ film_id: film.id, contributor_name: name });
+      contributorsMap.push({ filmId: film.id, contributorName: name });
     });
-    film.course.forEach((course_name) => {
-      courseMap.push({ film_id: film.id, courseFilm_name: course_name });
+    film.course.forEach((courseName) => {
+      courseMap.push({ filmId: film.id, courseFilmName: courseName });
     });
-    film.director_ids.forEach((id) => {
-      directorsMap.push({ film_id: film.id, director_id: id });
+    film.directorIds.forEach((id) => {
+      directorsMap.push({ filmId: film.id, directorId: id });
     });
-    posterMap.push({ film_slug: film.slug, poster_data: `data:image/jpg;base64,${fs.readFileSync("./public" + film.poster_path, { encoding: 'base64' })}` });
-    backdropMap.push({ film_slug: film.slug, backdrop_data: `data:image/jpg;base64,${fs.readFileSync("./public" + film.backdrop_path, { encoding: 'base64' })}` });
+    posterMap.push({ filmSlug: film.slug, posterData: `data:image/jpg;base64,${fs.readFileSync("./public" + film.posterPath, { encoding: 'base64' })}` });
+    backdropMap.push({ filmSlug: film.slug, backdropData: `data:image/jpg;base64,${fs.readFileSync("./public" + film.backdropPath, { encoding: 'base64' })}` });
   });
 
   await knex("Genre").del();

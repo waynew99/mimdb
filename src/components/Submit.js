@@ -39,7 +39,7 @@ export default function Submit({ allCourses=[], complete }) {
   });
 
   const { genres } = useContext(GenreCourseContext);
-  const { director_names } = useContext(DirectorNameContext);
+  const { directorNames } = useContext(DirectorNameContext);
 
   const [title, setTitle] = useState("");
   const [logLine, setLogLine] = useState("");
@@ -305,7 +305,7 @@ export default function Submit({ allCourses=[], complete }) {
         <OptionSelectCard
           title="Directors"
           allowCustom={false}
-          initialOptions={director_names}
+          initialOptions={directorNames}
           selectedOptions={inputDirectorList}
           useDropdown
           onChangeFunction={setDirectorInputList}

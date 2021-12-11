@@ -16,7 +16,7 @@ export default function SubmitPage() {
     if (!directorNameRes.ok) {
       throw new Error("Failed to fetch director name information from api");
     }
-    const director_names = await directorNameRes.json();
+    const directorNames = await directorNameRes.json();
 
     const allCoursesRes = await fetch("/api/courses/all");
     if (!allCoursesRes.ok) {
@@ -25,7 +25,7 @@ export default function SubmitPage() {
     const allCourses = await allCoursesRes.json();
 
     setCourses(allCourses);
-    setDirectorNames(director_names);
+    setDirectorNames(directorNames);
   }, []);
 
 
@@ -46,7 +46,7 @@ export default function SubmitPage() {
     return await postSubmit();
   }
 
-  const DirectorNameContextObject = { director_names: directorNames };
+  const DirectorNameContextObject = { directorNames: directorNames };
 
   return (
     <div className={styles.container}>

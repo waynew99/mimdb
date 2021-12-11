@@ -1,24 +1,24 @@
 [
     {
-        "director_name": "Wayne Wang",
-        "director_id": 1,
-        "director_bio": "I'm actually a programmer.",
-        "director_midd_email": "midd@middlebury.edu",
-        "director_personal_email": "personal@domain.com",
-        "director_graduation_year": "2022.5",
-        "director_slug": "wayne-wang",
-        "director_personal_email_is_private": true,
-        "director_midd_email_is_private": false
+        "directorName": "Wayne Wang",
+        "directorId": 1,
+        "directorBio": "I'm actually a programmer.",
+        "directorMiddEmail": "midd@middlebury.edu",
+        "directorPersonalEmail": "personal@domain.com",
+        "directorClassYear": "2022.5",
+        "directorSlug": "wayne-wang",
+        "directorPersonalEmailIsPrivate": true,
+        "directorMiddEmailIsPrivate": false
     },
     {
-        "director_name": "Nicholas Sliter",
-        "director_id": 2,
-        "director_bio": "I build applications like this one!",
-        "director_midd_email": "midd@middlebury.edu",
-        "director_personal_email": "personal@domain.com",
-        "director_graduation_year": "2023",
-        "director_slug": "nicholas-sliter",
-        "director_personal_email_is_private": true,
-        "director_midd_email_is_private": false
+        "directorName": "Nicholas Sliter",
+        "directorId": 2,
+        "directorBio": "I build applications like this one!",
+        "directorMiddEmail": "midd@middlebury.edu",
+        "directorPersonalEmail": "personal@domain.com",
+        "directorClassYear": "2023",
+        "directorSlug": "nicholas-sliter",
+        "directorPersonalEmailIsPrivate": true,
+        "directorMiddEmailIsPrivate": false
     }
 ]

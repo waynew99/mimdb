@@ -21,7 +21,7 @@ export default function useGetPoster(slug) {
         throw new Error(`Unable to fetch poster for film with slug of: ${slug}`);
       }
       const posterObject = await response.json();
-      setPosterData(posterObject.poster_data);
+      setPosterData(posterObject.posterData);
     }
     await getPoster();
     

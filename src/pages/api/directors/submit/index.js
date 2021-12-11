@@ -14,15 +14,15 @@ const handler = nc().post(async (req, res) => {
 
   // check slug, increment if duplicates slug
   // Adds "-[index]""
-  director.director_slug = convertToSlug(director.director_name);
-  const index = /-\d+$/.test(director.director_name) ? (+director.director_name.match(/\d+$/g)[0]) : 0;
-  while (await checkDirectorSlug(director.director_slug)) {
-    director.director_slug = convertToSlug(`${director.director_name}-${index}`);
+  director.directorSlug = convertToSlug(director.directorName);
+  const index = /-\d+$/.test(director.directorName) ? (+director.directorName.match(/\d+$/g)[0]) : 0;
+  while (await checkDirectorSlug(director.directorSlug)) {
+    director.directorSlug = convertToSlug(`${director.directorName}-${index}`);
   }
 
-  if (await checkDirectorSlug(director.director_slug)) {
+  if (await checkDirectorSlug(director.directorSlug)) {
     res.status(403).json({
-      error: `Director with slug ${director.director_slug} already exists`,
+      error: `Director with slug ${director.directorSlug} already exists`,
     });
     return;
   }

@@ -37,7 +37,7 @@ export default function FilmsByCourse() {
 
     setGenreFilmList(data);
     if (thisCourse[0]) {
-      setCourseDesc(thisCourse[0].course_description);
+      setCourseDesc(thisCourse[0].courseDescription);
     }
   }, [course]);
 

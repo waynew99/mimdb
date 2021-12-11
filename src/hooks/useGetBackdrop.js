@@ -22,7 +22,7 @@ export default function useGetBackdrop(slug) {
         throw new Error(`Unable to fetch backdrop for film with slug of: ${slug}`);
       }
       const backdropObject = await response.json();
-      setBackdropData(backdropObject.backdrop_data);
+      setBackdropData(backdropObject.backdropData);
     }
     await getBackdrop();
 

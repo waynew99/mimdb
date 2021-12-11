@@ -24,7 +24,7 @@ describe("Tests of database Film Table utility functions", () => {
 
     beforeAll(async () => {
         sampleFilm = films[0];
-        sampleFilm = (({ director_ids, course_CRNs, directors_slugs, ...rest }) => ({ rest }))(sampleFilm);
+        sampleFilm = (({ directorIds, course_CRNs, directors_slugs, ...rest }) => ({ rest }))(sampleFilm);
         sampleFilm = sampleFilm.rest;
         // boolean false and true gets turned into 0 and 1 by postgresSQL functions
         sampleFilm.video = sampleFilm.video === false ? 0 : 1;
@@ -37,12 +37,12 @@ describe("Tests of database Film Table utility functions", () => {
         allCourses = [...set];
 
         dramaFilms = films.filter((film) => film.genre.includes("Drama"));
-        dramaFilms = dramaFilms.map((film) => ({ film_id: film.id }));
+        dramaFilms = dramaFilms.map((film) => ({ filmId: film.id }));
 
         sightFilms = films.filter((film) => film.course.includes("Sight and Sound"));
-        sightFilms = sightFilms.map((film) => ({ film_id: film.id }));
+        sightFilms = sightFilms.map((film) => ({ filmId: film.id }));
 
-        properties = Object.keys(sampleFilm).filter((key) => key !== "course_CRNs" && key !== "director_ids");
+        properties = Object.keys(sampleFilm).filter((key) => key !== "course_CRNs" && key !== "directorIds");
     });
 
 
@@ -128,11 +128,11 @@ describe("Tests of database Film Table utility functions", () => {
         const testNewFilm = {
             "overview": "Testing Overview",
             "logLine": "Testing logLine",
-            "poster_path": "",
-            "backdrop_path": "",
-            "release_date": "2021-11-17",
+            "posterPath": "",
+            "backdropPath": "",
+            "releaseDate": "2021-11-17",
             "title": "Test Title",
-            "vimeo_id": "607602408",
+            "vimeoId": "607602408",
             "duration": "142 min",
             "term": "F21",
             "slug": "playing_around_in_cs"

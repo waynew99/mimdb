@@ -51,7 +51,7 @@ export default function SingleFilmDisplay({ film }) {
     <li key={contrib}>{contrib}</li>
   ));
   const { course } = film;
-  const vimeo_url = `https://vimeo.com/${film.vimeo_id}`;
+  const vimeo_url = `https://vimeo.com/${film.vimeoId}`;
 
   return (
     <div className={styles.pageContainer}>

@@ -2,7 +2,7 @@ import SingleFilmDisplay from "./SingleFilmDisplay";
 import { screen, render } from "@testing-library/react";
 
     const movie = {
-		backdrop_path: "/filmImages/sp_backdrop.jpg",
+		backdropPath: "/filmImages/sp_backdrop.jpg",
 		genre: [
 			"Animation"
 		],
@@ -10,12 +10,12 @@ import { screen, render } from "@testing-library/react";
 		slug: "spider-man-into-the-spider-verse",
 		overview: "Miles Morales is juggling his life between being a high school student and being a spider-man. When Wilson \"Kingpin\" Fisk uses a super collider, others from across the Spider-Verse are transported to this dimension.",
 		logLine: "A short one-sentence explanation of the film.",
-		poster_path: "/filmImages/sp_poster.jpg",
-		release_date: "2018-12-06",
+		posterPath: "/filmImages/sp_poster.jpg",
+		releaseDate: "2018-12-06",
 		term: "F21",
 		title: "Spider-Man: Into the Spider-Verse",
 		video: false,
-		vimeo_id: "607602408",
+		vimeoId: "607602408",
 		course: [
 			"Sight and Sound"
 		],
@@ -26,7 +26,7 @@ import { screen, render } from "@testing-library/react";
 			"Wayne Wang",
 			"Nicholas Sliter"
 		],
-		director_ids: [
+		directorIds: [
 			1,
 			2
 		],
