@@ -6,7 +6,7 @@ exports.up = function(knex) {
     table.increments("id");
     table.string("slug").unique().notNullable();
     table.text("overview");
-    table.string("description");
+    table.string("logLine");
     table.string("poster_path");
     table.string("term");
     table.string("release_date");

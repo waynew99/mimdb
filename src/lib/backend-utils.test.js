@@ -127,7 +127,7 @@ describe("Tests of database Film Table utility functions", () => {
     test("addFilm: add film into database", async () => {
         const testNewFilm = {
             "overview": "Testing Overview",
-            "description": "Testing Description",
+            "logLine": "Testing logLine",
             "poster_path": "",
             "backdrop_path": "",
             "release_date": "2021-11-17",

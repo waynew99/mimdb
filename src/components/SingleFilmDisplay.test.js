@@ -9,7 +9,7 @@ import { screen, render } from "@testing-library/react";
 		id: 1,
 		slug: "spider-man-into-the-spider-verse",
 		overview: "Miles Morales is juggling his life between being a high school student and being a spider-man. When Wilson \"Kingpin\" Fisk uses a super collider, others from across the Spider-Verse are transported to this dimension.",
-		description: "A short one-sentence explanation of the film.",
+		logLine: "A short one-sentence explanation of the film.",
 		poster_path: "/filmImages/sp_poster.jpg",
 		release_date: "2018-12-06",
 		term: "F21",

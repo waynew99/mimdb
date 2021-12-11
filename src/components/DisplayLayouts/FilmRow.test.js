@@ -12,7 +12,7 @@ const testFilms = [{
         "en"
     ],
     "overview": "Miles Morales is juggling his life between being a high school student and being a spider-man. When Wilson \"Kingpin\" Fisk uses a super collider, others from across the Spider-Verse are transported to this dimension.",
-    "description": "A short one-sentence explanation of the film.",
+    "logLine": "A short one-sentence explanation of the film.",
     "poster_path": "/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
     "release_date": "2018-12-06",
     "title": "Spider-Man: Into the Spider-Verse",
@@ -48,7 +48,7 @@ const testFilms = [{
         "en"
     ],
     "overview": "Earth is decimated after intergalactic tyrant Darkseid has devastated the Justice League in a poorly executed war by the DC Super Heroes. Now the remaining bastions of good – the Justice League, Teen Titans, Suicide Squad and assorted others – must regroup, strategize and take the war to Darkseid in order to save the planet and its surviving inhabitants.",
-    "description": "A short one-sentence explanation of the film.",
+    "logLine": "A short one-sentence explanation of the film.",
     "poster_path": "/c01Y4suApJ1Wic2xLmaq1QYcfoZ.jpg",
     "release_date": "2020-05-05",
     "title": "Justice League Dark: Apokolips War",

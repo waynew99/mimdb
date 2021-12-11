@@ -62,10 +62,10 @@ describe("Submit: Submitter tests", () => {
     const newFilm = handler.mock.calls[0][0]; // value the handler was called with
 
     expect(newFilm.title).toEqual(film.title);
-    expect(newFilm.overview).toEqual(film.logLine);
+    expect(newFilm.overview).toEqual(film.overview);
     expect(newFilm.term).toEqual(film.release_date);
     expect(newFilm.duration).toEqual(film.duration);
     expect(newFilm.vimeoId).toEqual(film.vimeoId);
-    expect(newFilm.description).toEqual(film.overview);
+    expect(newFilm.logLine).toEqual(film.logLine);
   });
 })

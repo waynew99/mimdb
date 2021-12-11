@@ -181,7 +181,7 @@ export default function Submit({ allCourses=[], complete }) {
       term: semester,
       duration: `${duration} min`,
       vimeoId: vimeoId,
-      description: logLine,
+      logLine: logLine,
       inputDirectorList: inputDirectorList,
       inputActorList: inputActorList,
       genreList: genreList,
