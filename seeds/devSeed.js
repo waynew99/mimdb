@@ -4,7 +4,6 @@ const fs = require("fs");
 exports.seed = async function (knex) {
   // Loading database "Film"
   const filmContents = fs.readFileSync("./data/tempData.json");
-  console.log(filmContents);
   const films = JSON.parse(filmContents);
   const processedFilms = films.map((film) => {
     return (({
@@ -42,7 +41,7 @@ exports.seed = async function (knex) {
   await knex.batchInsert("Film", processedFilms, 100);
 
   // Loading database "Course", "Directors"
-  const courseContents = fs.readFileSync("./data/tempCourses.json");
+  const courseContents = fs.readFileSync("./data/courses.json");
   const courses = JSON.parse(courseContents);
   await knex("Course").del();
   await knex.batchInsert("Course", courses, 100);
