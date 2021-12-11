@@ -23,7 +23,7 @@ module.exports = {
       directory: "./migrations"
     },
     seeds: {
-      directory: "./seeds"
+      directory: "./seeds_dev"
     },
     ssl: {
       rejectUnauthorized: false

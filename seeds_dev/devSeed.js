@@ -1,9 +1,10 @@
-/*
+
 const fs = require("fs");
 
 exports.seed = async function (knex) {
   // Loading database "Film"
   const filmContents = fs.readFileSync("./data/tempData.json");
+  console.log(filmContents);
   const films = JSON.parse(filmContents);
   const processedFilms = films.map((film) => {
     return (({
@@ -101,4 +102,3 @@ exports.seed = async function (knex) {
   await knex("Backdrop").del();
   await knex.batchInsert("Backdrop", backdropMap, 100);
 };
-*/
