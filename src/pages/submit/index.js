@@ -12,20 +12,22 @@ export default function SubmitPage() {
   const [courses, setCourses] = useState([]);
 
   useEffect(async () => {
-    const directorNameRes = await fetch("/api/directors");
-    if (!directorNameRes.ok) {
-      throw new Error("Failed to fetch director name information from api");
-    }
-    const directorNames = await directorNameRes.json();
-
+    // courses
     const allCoursesRes = await fetch("/api/courses/all");
     if (!allCoursesRes.ok) {
       throw new Error("Failed to fetch director name information from api");
     }
     const allCourses = await allCoursesRes.json();
 
+    // directors
+    const directorNameRes = await fetch("/api/directors");
+    if (!directorNameRes.ok) {
+      throw new Error("Failed to fetch director name information from api");
+    }
+    const directors = await directorNameRes.json();
+
     setCourses(allCourses);
-    setDirectorNames(directorNames);
+    setDirectorNames(directors);
   }, []);
 
 

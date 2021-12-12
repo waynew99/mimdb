@@ -25,7 +25,7 @@ import imageCompression from "browser-image-compression";
 import ImageSelector from "./FilmSubmission/ImageSelector";
 import ImageSelectorTabs from "./FilmSubmission/ImageSelectorTabs";
 
-export default function Submit({ allCourses=[], complete }) {
+export default function Submit({ allCourses = [], complete }) {
   const [errorObject, setErrorObject] = useState({
     title: false,
     logLine: false,
@@ -85,7 +85,7 @@ export default function Submit({ allCourses=[], complete }) {
     }
     return bool;
   };
-  
+
   const updateValid = (emptyBool) => {
     setIsValid(!reduceErrorObject(errorObject) && !emptyBool);
   };
@@ -189,7 +189,7 @@ export default function Submit({ allCourses=[], complete }) {
       poster: croppedPoster,
       backdrop: croppedBackdrop,
     };
-    const {ok, error} = await complete(submitContent);
+    const { ok, error } = await complete(submitContent);
     if (ok) {
       alert("Submission successful!", router.push("/"));
     }
