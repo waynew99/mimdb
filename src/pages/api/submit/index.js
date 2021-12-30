@@ -9,16 +9,18 @@ const validateAndProcessNewFilm = async (inFilm) => {
     // let processedFilm = {...inFilm, slug: convertToSlug(processedFilm.title)};
     const processedFilm = {
       "overview": inFilm.overview,
-      "description": inFilm.description,
+      "logLine": inFilm.logLine,
       "term": inFilm.term,
       "title": inFilm.title,
       "duration": inFilm.duration,
       "slug": convertToSlug(inFilm.title),
-      "vimeo_id": inFilm.vimeoId,
+      "vimeoId": inFilm.vimeoId,
       "approved": false
     }
 
-    if (processedFilm.title.includes("/")) throw new Error("Suspicious. Why do you have a '/' in your title?");
+    if (processedFilm.title.includes("/")) {
+      throw new Error("Suspicious. Why do you have a '/' in your title?");
+    }
 
     // check slug, increment if duplicates slug
     // let index = 0;
@@ -26,17 +28,16 @@ const validateAndProcessNewFilm = async (inFilm) => {
     let index = /-\d+$/.test(processedFilm.title) ? (+processedFilm.title.match(/\d+$/g)[0]) : 0;
     while (await getFilmBySlug(processedFilm.slug)) {
       processedFilm.title = `${inFilm.title} ${++index}`;
-      // processedFilm.slug = convertToSlug(processedFilm.title);
-      processedFilm.slug = convertToSlug(`${inFilm.title  }-${index}`);
+      processedFilm.slug = convertToSlug(`${inFilm.title}-${index}`);
     }
-    
+
     // Add default empty picture paths
     // TODO: to be replaced by user uploaded image paths, as well as randomly generated gradient
-    processedFilm.backdrop_path = (!inFilm.backdrop_path || inFilm.backdrop_path==="") ? "/defaults/salmon-blue.svg" : `/filmImages${inFilm.backdrop_path}`;
-    processedFilm.poster_path = (!inFilm.poster_path || inFilm.poster_path==="") ? `/defaults/chapelBackground-3-2.jpg` : `/filmImages${inFilm.poster_path}`;
-    
+    processedFilm.backdropPath = (!inFilm.backdropPath || inFilm.backdropPath === "") ? "/defaults/salmon-blue.svg" : `/filmImages${inFilm.backdropPath}`;
+    processedFilm.posterPath = (!inFilm.posterPath || inFilm.posterPath === "") ? `/defaults/chapelBackground-3-2.jpg` : `/filmImages${inFilm.posterPath}`;
+
     // Generate vimeo boolean, simple
-    processedFilm.video = processedFilm.vimeo_id && true;
+    processedFilm.video = processedFilm.vimeoId && true;
     return processedFilm;
   }
   catch (error) {
@@ -56,30 +57,30 @@ const handler = nc()
       let addedFilm = await addFilm(processedFilm); // add to the Film DB
 
       // Add director relationship to the DirectorsFilm DB
-      await Promise.all(newFilm.inputDirectorList.map(async (director_name) => {
-        const director = await getDirector(director_name);
-        if (director.length===0) {
+      await Promise.all(newFilm.inputDirectorList.map(async (directorName) => {
+        const director = await getDirector(directorName);
+        if (director.length === 0) {
           res.status(500).json({
-            error: `The given director does not exist: ${director_name}`
+            error: `The given director does not exist: ${directorName}`
           });
           return;
         }
-        addedFilm = await addDirectorsFilm(director_name, addedFilm.id);
+        addedFilm = await addDirectorsFilm(directorName, addedFilm.id);
       }));
 
       // Add course relationship to the CourseFilm DB
-      await Promise.all(newFilm.courseList.map(async (course_name) => {
-        addedFilm = await addCourseFilm(course_name, addedFilm.id);
+      await Promise.all(newFilm.courseList.map(async (courseName) => {
+        addedFilm = await addCourseFilm(courseName, addedFilm.id);
       }));
 
       // Add actors to the Actors DB
-      await Promise.all(newFilm.inputActorList.map(async (actor_name) => {
-        addedFilm = await addActorFilm(actor_name, addedFilm.id);
+      await Promise.all(newFilm.inputActorList.map(async (actorName) => {
+        addedFilm = await addActorFilm(actorName, addedFilm.id);
       }));
 
       // Add genre to the Genre DB
-      await Promise.all(newFilm.genreList.map(async (genre_name) => {
-        addedFilm = await addGenreFilm(genre_name, addedFilm.id);
+      await Promise.all(newFilm.genreList.map(async (genreName) => {
+        addedFilm = await addGenreFilm(genreName, addedFilm.id);
       }));
 
       // Add poster to Poster DB
@@ -87,7 +88,7 @@ const handler = nc()
       // Testing place holder
       addedFilm = await addPosterBySlug(newFilm.poster, processedFilm.slug);
       //addedFilm = await addPosterBySlug(default_grey_svg, processedFilm.slug)  
-      
+
       // Testing place holder
       // Add backdrop to Backdrop DB
       addedFilm = await addBackdropBySlug(newFilm.backdrop, processedFilm.slug);

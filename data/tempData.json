@@ -1,19 +1,19 @@
 [
 	{
-		"backdrop_path": "/filmImages/sp_backdrop.jpg",
+		"backdropPath": "/filmImages/sp_backdrop.jpg",
 		"genre": [
 			"Animation"
 		],
 		"id": 1,
 		"slug": "spider-man-into-the-spider-verse",
 		"overview": "Miles Morales is juggling his life between being a high school student and being a spider-man. When Wilson \"Kingpin\" Fisk uses a super collider, others from across the Spider-Verse are transported to this dimension.",
-		"description": "A short one-sentence explanation of the film.",
-		"poster_path": "/filmImages/sp_poster.jpg",
-		"release_date": "2018-12-06",
+		"logLine": "A short one-sentence explanation of the film.",
+		"posterPath": "/filmImages/sp_poster.jpg",
+		"releaseDate": "2018-12-06",
 		"term": "F21",
 		"title": "Spider-Man: Into the Spider-Verse",
 		"video": false,
-		"vimeo_id": "607602408",
+		"vimeoId": "607602408",
 		"course": [
 			"Sight and Sound"
 		],
@@ -24,7 +24,7 @@
 			"Wayne Wang",
 			"Nicholas Sliter"
 		],
-		"director_ids": [
+		"directorIds": [
 			1,
 			2
 		],
@@ -45,7 +45,7 @@
 		"approved": true
 	},
 	{
-		"backdrop_path": "/filmImages/jd_backdrop.jpeg",
+		"backdropPath": "/filmImages/jd_backdrop.jpeg",
 		"genre": [
 			"Drama",
 			"Sci-fi"
@@ -53,13 +53,13 @@
 		"id": 2,
 		"slug": "justice-league-dark-apokolips-war",
 		"overview": "Earth is decimated after intergalactic tyrant Darkseid has devastated the Justice League in a poorly executed war by the DC Super Heroes. Now the remaining bastions of good – the Justice League, Teen Titans, Suicide Squad and assorted others – must regroup, strategize and take the war to Darkseid in order to save the planet and its surviving inhabitants.",
-		"description": "A short one-sentence explanation of the film.",
-		"poster_path": "/filmImages/jd_poster.jpg",
-		"release_date": "2020-05-05",
+		"logLine": "A short one-sentence explanation of the film.",
+		"posterPath": "/filmImages/jd_poster.jpg",
+		"releaseDate": "2020-05-05",
 		"term": "F20",
 		"title": "Justice League Dark: Apokolips War",
 		"video": false,
-		"vimeo_id": "607602408",
+		"vimeoId": "607602408",
 		"course": [
 			"Sight and Sound"
 		],
@@ -70,7 +70,7 @@
 			"Wayne Wang",
 			"Nicholas Sliter"
 		],
-		"director_ids": [
+		"directorIds": [
 			1,
 			2
 		],
@@ -91,17 +91,17 @@
 		"approved": true
 	},
 	{
-		"backdrop_path": "/filmImages/eb_backdrop.jpg",
+		"backdropPath": "/filmImages/eb_backdrop.jpg",
 		"genre": [],
 		"id": 3,
 		"slug": "the-empire-strikes-back",
 		"overview": "The epic saga continues as Luke Skywalker, in hopes of defeating the evil Galactic Empire, learns the ways of the Jedi from aging master Yoda. But Darth Vader is more determined than ever to capture Luke. Meanwhile, rebel leader Princess Leia, cocky Han Solo, Chewbacca, and droids C-3PO and R2-D2 are thrown into various stages of capture, betrayal and despair.",
-		"description": "A short one-sentence explanation of the film.",
-		"poster_path": "/filmImages/eb_poster.jpg",
-		"release_date": "1980-05-20",
+		"logLine": "A short one-sentence explanation of the film.",
+		"posterPath": "/filmImages/eb_poster.jpg",
+		"releaseDate": "1980-05-20",
 		"term": "S21",
 		"title": "The Empire Strikes Back",
-		"vimeo_id": "607602408",
+		"vimeoId": "607602408",
 		"course": [
 			"Sight and Sound"
 		],
@@ -111,7 +111,7 @@
 		"directors": [
 			"Wayne Wang"
 		],
-		"director_ids": [
+		"directorIds": [
 			1
 		],
 		"directors_slugs": [
@@ -130,7 +130,7 @@
 		"approved": true
 	},
 	{
-		"backdrop_path": "/filmImages/ne_backdrop.png",
+		"backdropPath": "/filmImages/ne_backdrop.png",
 		"genre": [
 			"Animation"
 		],
@@ -140,12 +140,12 @@
 			"ja"
 		],
 		"overview": "The second of two theatrically released follow-ups to the Neon Genesis Evangelion series. Comprising of two alternate episodes which were first intended to take the place of episodes 25 and 26, this finale answers many of the questions surrounding the series, while also opening up some new possibilities.",
-		"description": "A short one-sentence explanation of the film.",
-		"poster_path": "/filmImages/ne_poster.jpg",
-		"release_date": "1997-07-19",
+		"logLine": "A short one-sentence explanation of the film.",
+		"posterPath": "/filmImages/ne_poster.jpg",
+		"releaseDate": "1997-07-19",
 		"term": "F20",
 		"title": "Neon Genesis Evangelion: The End of Evangelion",
-		"vimeo_id": "607602408",
+		"vimeoId": "607602408",
 		"course": [
 			"Sight and Sound"
 		],
@@ -155,7 +155,7 @@
 		"directors": [
 			"Wayne Wang"
 		],
-		"director_ids": [
+		"directorIds": [
 			1
 		],
 		"directors_slugs": [
@@ -174,18 +174,18 @@
 		"approved": true
 	},
 	{
-		"backdrop_path": "/filmImages/in_backdrop.jpeg",
+		"backdropPath": "/filmImages/in_backdrop.jpeg",
 		"genre": [],
 		"id": 5,
 		"slug": "inception",
 		"overview": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious.",
-		"description": "A short one-sentence explanation of the film.",
-		"poster_path": "/filmImages/in_poster.jpg",
-		"release_date": "2010-07-15",
+		"logLine": "A short one-sentence explanation of the film.",
+		"posterPath": "/filmImages/in_poster.jpg",
+		"releaseDate": "2010-07-15",
 		"term": "F20",
 		"title": "Inception",
 		"video": false,
-		"vimeo_id": "607602408",
+		"vimeoId": "607602408",
 		"course": [
 			"Sight and Sound"
 		],
@@ -195,7 +195,7 @@
 		"directors": [
 			"Wayne Wang"
 		],
-		"director_ids": [
+		"directorIds": [
 			1
 		],
 		"directors_slugs": [
@@ -214,7 +214,7 @@
 		"approved": true
 	},
 	{
-		"backdrop_path": "/filmImages/is_backdrop.jpg",
+		"backdropPath": "/filmImages/is_backdrop.jpg",
 		"genre": [
 			"Sci-fi",
 			"Drama",
@@ -223,13 +223,13 @@
 		"id": 6,
 		"slug": "interstellar",
 		"overview": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
-		"description": "A short one-sentence explanation of the film.",
-		"poster_path": "/filmImages/is_poster.jpg",
-		"release_date": "2014-11-05",
+		"logLine": "A short one-sentence explanation of the film.",
+		"posterPath": "/filmImages/is_poster.jpg",
+		"releaseDate": "2014-11-05",
 		"term": "F21",
 		"title": "Interstellar",
 		"video": false,
-		"vimeo_id": "607602408",
+		"vimeoId": "607602408",
 		"course": [
 			"Sight and Sound"
 		],
@@ -239,7 +239,7 @@
 		"directors": [
 			"Wayne Wang"
 		],
-		"director_ids": [
+		"directorIds": [
 			1
 		],
 		"directors_slugs": [
@@ -258,7 +258,7 @@
 		"approved": true
 	},
 	{
-		"backdrop_path": "/filmImages/dd_backdrop.jpg",
+		"backdropPath": "/filmImages/dd_backdrop.jpg",
 		"genre": [
 			"Drama",
 			"Sci-fi"
@@ -266,12 +266,12 @@
 		"id": 7,
 		"slug": "doctor-who-the-day-of-the-doctor",
 		"overview": "In 2013, something terrible is awakening in London's National Gallery; in 1562, a murderous plot is afoot in Elizabethan England; and somewhere in space an ancient battle reaches its devastating conclusion. All of reality is at stake as the Doctor's own dangerous past comes back to haunt him.",
-		"description": "A short one-sentence explanation of the film.",
-		"poster_path": "/filmImages/dd_poster.jpg",
-		"release_date": "2013-11-23",
+		"logLine": "A short one-sentence explanation of the film.",
+		"posterPath": "/filmImages/dd_poster.jpg",
+		"releaseDate": "2013-11-23",
 		"term": "F19",
 		"title": "Doctor Who: The Day of the Doctor",
-		"vimeo_id": "607602408",
+		"vimeoId": "607602408",
 		"course": [
 			"Sight and Sound"
 		],
@@ -281,7 +281,7 @@
 		"directors": [
 			"Wayne Wang"
 		],
-		"director_ids": [
+		"directorIds": [
 			1
 		],
 		"directors_slugs": [
@@ -300,17 +300,17 @@
 		"approved": true
 	},
 	{
-		"backdrop_path": "/filmImages/bf_backdrop.jpg",
+		"backdropPath": "/filmImages/bf_backdrop.jpg",
 		"genre": [],
 		"id": 8,
 		"slug": "back-to-the-future",
 		"overview": "Eighties teenager Marty McFly is accidentally sent back in time to 1955, inadvertently disrupting his parents' first meeting and attracting his mother's romantic interest. Marty must repair the damage to history by rekindling his parents' romance and - with the help of his eccentric inventor friend Doc Brown - return to 1985.",
-		"description": "A short one-sentence explanation of the film.",
-		"poster_path": "/filmImages/bf_poster.jpg",
-		"release_date": "1985-07-03",
+		"logLine": "A short one-sentence explanation of the film.",
+		"posterPath": "/filmImages/bf_poster.jpg",
+		"releaseDate": "1985-07-03",
 		"term": "F21",
 		"title": "Back to the Future",
-		"vimeo_id": "607602408",
+		"vimeoId": "607602408",
 		"course": [
 			"Sight and Sound"
 		],
@@ -320,7 +320,7 @@
 		"directors": [
 			"Wayne Wang"
 		],
-		"director_ids": [
+		"directorIds": [
 			1
 		],
 		"directors_slugs": [
@@ -339,17 +339,17 @@
 		"approved": true
 	},
 	{
-		"backdrop_path": "/filmImages/st_backdrop.jpg",
+		"backdropPath": "/filmImages/st_backdrop.jpg",
 		"genre": [],
 		"id": 9,
 		"slug": "stalker",
 		"overview": "Near a gray and unnamed city is the Zone, a place guarded by barbed wire and soldiers, and where the normal laws of physics are victim to frequent anomalies. A stalker guides two men into the Zone, specifically to an area in which deep-seated desires are granted.",
-		"description": "A short one-sentence explanation of the film.",
-		"poster_path": "/filmImages/st_poster.jpg",
-		"release_date": "1979-05-25",
+		"logLine": "A short one-sentence explanation of the film.",
+		"posterPath": "/filmImages/st_poster.jpg",
+		"releaseDate": "1979-05-25",
 		"term": "F21",
 		"title": "Stalker",
-		"vimeo_id": "607602408",
+		"vimeoId": "607602408",
 		"course": [
 			"Independent Project"
 		],
@@ -359,7 +359,7 @@
 		"directors": [
 			"Wayne Wang"
 		],
-		"director_ids": [
+		"directorIds": [
 			1
 		],
 		"directors_slugs": [
@@ -378,7 +378,7 @@
 		"approved": true
 	},
 	{
-		"backdrop_path": "/filmImages/av_backdrop.jpg",
+		"backdropPath": "/filmImages/av_backdrop.jpg",
 		"genre": [
 			"Action",
 			"Sci-fi"
@@ -386,13 +386,13 @@
 		"id": 10,
 		"slug": "avengers-infinity-war",
 		"overview": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
-		"description": "A short one-sentence explanation of the film.",
-		"poster_path": "/filmImages/av_poster.jpg",
-		"release_date": "2018-04-25",
+		"logLine": "A short one-sentence explanation of the film.",
+		"posterPath": "/filmImages/av_poster.jpg",
+		"releaseDate": "2018-04-25",
 		"term": "W21",
 		"title": "Avengers: Infinity War",
 		"video": false,
-		"vimeo_id": "607602408",
+		"vimeoId": "607602408",
 		"course": [
 			"Sight and Sound"
 		],
@@ -402,7 +402,7 @@
 		"directors": [
 			"Wayne Wang"
 		],
-		"director_ids": [
+		"directorIds": [
 			1
 		],
 		"directors_slugs": [
@@ -421,18 +421,18 @@
 		"approved": true
 	},
 	{
-		"backdrop_path": "/filmImages/si_backdrop.jpg",
+		"backdropPath": "/filmImages/si_backdrop.jpg",
 		"genre": [],
 		"id": 11,
 		"slug": "star-wars",
 		"overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
-		"description": "A short one-sentence explanation of the film.",
-		"poster_path": "/filmImages/si_poster.jpg",
-		"release_date": "1977-05-25",
+		"logLine": "A short one-sentence explanation of the film.",
+		"posterPath": "/filmImages/si_poster.jpg",
+		"releaseDate": "1977-05-25",
 		"term": "S21",
 		"title": "Star Wars",
 		"video": false,
-		"vimeo_id": "607602408",
+		"vimeoId": "607602408",
 		"course": [
 			"Sight and Sound"
 		],
@@ -442,7 +442,7 @@
 		"directors": [
 			"Wayne Wang"
 		],
-		"director_ids": [
+		"directorIds": [
 			1
 		],
 		"directors_slugs": [
@@ -461,18 +461,18 @@
 		"approved": true
 	},
 	{
-		"backdrop_path": "/filmImages/mt_backdrop.jpg",
+		"backdropPath": "/filmImages/mt_backdrop.jpg",
 		"genre": [],
 		"id": 12,
 		"slug": "metropolis",
 		"overview": "In a futuristic city sharply divided between the working class and the city planners, the son of the city's mastermind falls in love with a working class prophet who predicts the coming of a savior to mediate their differences.",
-		"description": "A short one-sentence explanation of the film.",
-		"poster_path": "/filmImages/mt_poster.jpg",
-		"release_date": "1927-02-06",
+		"logLine": "A short one-sentence explanation of the film.",
+		"posterPath": "/filmImages/mt_poster.jpg",
+		"releaseDate": "1927-02-06",
 		"term": "F21",
 		"title": "Metropolis",
 		"video": false,
-		"vimeo_id": "607602408",
+		"vimeoId": "607602408",
 		"course": [
 			"Sight and Sound"
 		],
@@ -482,7 +482,7 @@
 		"directors": [
 			"Wayne Wang"
 		],
-		"director_ids": [
+		"directorIds": [
 			1
 		],
 		"directors_slugs": [
@@ -501,18 +501,18 @@
 		"approved": true
 	},
 	{
-		"backdrop_path": "/filmImages/mx_backdrop.jpg",
+		"backdropPath": "/filmImages/mx_backdrop.jpg",
 		"genre": [],
 		"id": 13,
 		"slug": "the-matrix",
 		"overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
-		"description": "A short one-sentence explanation of the film.",
-		"poster_path": "/filmImages/mx_poster.jpg",
-		"release_date": "1999-03-30",
+		"logLine": "A short one-sentence explanation of the film.",
+		"posterPath": "/filmImages/mx_poster.jpg",
+		"releaseDate": "1999-03-30",
 		"term": "S21",
 		"title": "The Matrix",
 		"video": false,
-		"vimeo_id": "607602408",
+		"vimeoId": "607602408",
 		"course": [
 			"Sight and Sound"
 		],
@@ -522,7 +522,7 @@
 		"directors": [
 			"Wayne Wang"
 		],
-		"director_ids": [
+		"directorIds": [
 			1
 		],
 		"directors_slugs": [
@@ -541,18 +541,18 @@
 		"approved": true
 	},
 	{
-		"backdrop_path": "/filmImages/dc_backdrop.jpg",
+		"backdropPath": "/filmImages/dc_backdrop.jpg",
 		"genre": [],
 		"id": 14,
 		"slug": "doctor-who-a-christmas-carol",
 		"overview": "Amy Pond and Rory Williams are trapped on a crashing space liner, and the only way the Eleventh Doctor can rescue them is to save the soul of a lonely old miser. But is Kazran Sardick, the richest man in Sardicktown, beyond redemption? And what is lurking in the fogs of Christmas Eve?",
-		"description": "A short one-sentence explanation of the film.",
-		"poster_path": "/filmImages/dc_poster.jpg",
-		"release_date": "2010-12-25",
+		"logLine": "A short one-sentence explanation of the film.",
+		"posterPath": "/filmImages/dc_poster.jpg",
+		"releaseDate": "2010-12-25",
 		"term": "F21",
 		"title": "Doctor Who: A Christmas Carol",
 		"video": false,
-		"vimeo_id": "607602408",
+		"vimeoId": "607602408",
 		"course": [
 			"Sight and Sound"
 		],
@@ -562,7 +562,7 @@
 		"directors": [
 			"Wayne Wang"
 		],
-		"director_ids": [
+		"directorIds": [
 			1
 		],
 		"directors_slugs": [

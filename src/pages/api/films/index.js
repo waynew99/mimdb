@@ -12,21 +12,21 @@ import {
 import { validateFilterTerm } from "../../../lib/backend-utils";
 
 const func = {
-  "term" : getFilmsByTerm,
-  "genre" : getFilmsByGenre,
-  "course" : getFilmsByCourse,
-  "director" : getFilmsByDirector,
-  "actor" : getFilmsByActor,
-  "contributor" : getFilmsByContributor,
+  "term": getFilmsByTerm,
+  "genre": getFilmsByGenre,
+  "course": getFilmsByCourse,
+  "director": getFilmsByDirector,
+  "actor": getFilmsByActor,
+  "contributor": getFilmsByContributor,
 };
 
 const filter2field = {
-  "term" : "term",
-  "genre" : "genre",
-  "course" : "course",
-  "director" : "directors",
-  "actor" : "actors",
-  "contributor" : "contributors",
+  "term": "term",
+  "genre": "genre",
+  "course": "course",
+  "director": "directors",
+  "actor": "actors",
+  "contributor": "contributors",
 }
 
 /**
@@ -40,7 +40,7 @@ const multiFilters = ((film_list, filters) => {
     let match = true;
     Object.keys(filters).forEach((filter) => {
       const field = filter2field[filter];
-      match = Array.isArray(film[field]) ? film[field].includes(filters[filter]) : filters[filter]===film[field];
+      match = Array.isArray(film[field]) ? film[field].includes(filters[filter]) : filters[filter] === film[field];
     });
     return match;
   });
@@ -57,7 +57,7 @@ const handler = nc().get(async (req, res) => {
 
   const filters = req.query;
 
-  if (Object.keys(filters).length===0) {
+  if (Object.keys(filters).length === 0) {
     // No filters, returning all films.
     res.status(200).json(await getAllFilms());
     return;
@@ -75,8 +75,8 @@ const handler = nc().get(async (req, res) => {
 
   const primary_filter = Object.keys(filters)[0];
   const value = filters[primary_filter];
-  
-  // having its format as [{film_id: 3}, {film_id:52}, ...]
+
+  // having its format as [{filmId: 3}, {filmId:52}, ...]
   // Getting film IDs from the database by the primary filter
   const id_list = await func[primary_filter](value);
 
@@ -86,13 +86,13 @@ const handler = nc().get(async (req, res) => {
     });
     return;
   }
-  
+
   // Get all films based on the id_list
-  let film_list = await Promise.all(id_list.map(async (film_id) => await getFilmById(film_id.film_id)));
+  let film_list = await Promise.all(id_list.map(async (filmId) => await getFilmById(filmId.filmId)));
 
   film_list = film_list.filter((film) => film && film.approved);
 
-  if (Object.keys(filters).length>1) {
+  if (Object.keys(filters).length > 1) {
     film_list = multiFilters(film_list, filters);
   }
 

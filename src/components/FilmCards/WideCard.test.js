@@ -2,7 +2,7 @@ import { screen, render } from "@testing-library/react";
 import WideCard from "./WideCard";
 
 const testFilms = [{
-    "backdrop_path": "/7d6EY00g1c39SGZOoCJ5Py9nNth.jpg",
+    "backdropPath": "/7d6EY00g1c39SGZOoCJ5Py9nNth.jpg",
     "genre": [
         "Animation"
     ],
@@ -12,12 +12,12 @@ const testFilms = [{
         "en"
     ],
     "overview": "Miles Morales is juggling his life between being a high school student and being a spider-man. When Wilson \"Kingpin\" Fisk uses a super collider, others from across the Spider-Verse are transported to this dimension.",
-    "description": "A short one-sentence explanation of the film.",
-    "poster_path": "/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
-    "release_date": "2018-12-06",
+    "logLine": "A short one-sentence explanation of the film.",
+    "posterPath": "/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+    "releaseDate": "2018-12-06",
     "title": "Spider-Man: Into the Spider-Verse",
     "video": false,
-    "vimeo_id": "12345678",
+    "vimeoId": "12345678",
     "course": [
         "Television in the US"
     ],
@@ -37,7 +37,7 @@ const testFilms = [{
     "term": "F21"
 },
 {
-    "backdrop_path": "/sQkRiQo3nLrQYMXZodDjNUJKHZV.jpg",
+    "backdropPath": "/sQkRiQo3nLrQYMXZodDjNUJKHZV.jpg",
     "genre": [
         "Drama",
         "Sci-fi"
@@ -48,12 +48,12 @@ const testFilms = [{
         "en"
     ],
     "overview": "Earth is decimated after intergalactic tyrant Darkseid has devastated the Justice League in a poorly executed war by the DC Super Heroes. Now the remaining bastions of good – the Justice League, Teen Titans, Suicide Squad and assorted others – must regroup, strategize and take the war to Darkseid in order to save the planet and its surviving inhabitants.",
-    "description": "A short one-sentence explanation of the film.",
-    "poster_path": "/c01Y4suApJ1Wic2xLmaq1QYcfoZ.jpg",
-    "release_date": "2020-05-05",
+    "logLine": "A short one-sentence explanation of the film.",
+    "posterPath": "/c01Y4suApJ1Wic2xLmaq1QYcfoZ.jpg",
+    "releaseDate": "2020-05-05",
     "title": "Justice League Dark: Apokolips War",
     "video": false,
-    "vimeo_id": "12345678",
+    "vimeoId": "12345678",
     "course": [
         "Film Theory"
     ],
@@ -92,10 +92,10 @@ describe.skip("WideCard: WideCard contents", ()=>{
         expect(getByText(testFilms[0].genre)).toBeVisible();
     });
 
-    test("Film description shows up", async () => {
+    test("Film logLine shows up", async () => {
         const { getByText } = render(<WideCard film={testFilms[0]}/>);
-        expect(getByText(testFilms[0].description)).toBeInTheDocument();
-        expect(getByText(testFilms[0].description)).toBeVisible();
+        expect(getByText(testFilms[0].logLine)).toBeInTheDocument();
+        expect(getByText(testFilms[0].logLine)).toBeVisible();
     });
 
     test("Test wide poster displays", async() => {

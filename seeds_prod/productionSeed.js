@@ -1,3 +1,4 @@
+/*
 const fs = require("fs");
 
 exports.seed = async function (knex) {
@@ -8,3 +9,4 @@ exports.seed = async function (knex) {
   await knex("Course").del();
   await knex.batchInsert("Course", courses, 100);
 };
+*/

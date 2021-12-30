@@ -25,7 +25,7 @@ import imageCompression from "browser-image-compression";
 import ImageSelector from "./FilmSubmission/ImageSelector";
 import ImageSelectorTabs from "./FilmSubmission/ImageSelectorTabs";
 
-export default function Submit({ allCourses=[], complete }) {
+export default function Submit({ allCourses = [], complete }) {
   const [errorObject, setErrorObject] = useState({
     title: false,
     logLine: false,
@@ -39,7 +39,7 @@ export default function Submit({ allCourses=[], complete }) {
   });
 
   const { genres } = useContext(GenreCourseContext);
-  const { director_names } = useContext(DirectorNameContext);
+  const { directorNames } = useContext(DirectorNameContext);
 
   const [title, setTitle] = useState("");
   const [logLine, setLogLine] = useState("");
@@ -85,7 +85,7 @@ export default function Submit({ allCourses=[], complete }) {
     }
     return bool;
   };
-  
+
   const updateValid = (emptyBool) => {
     setIsValid(!reduceErrorObject(errorObject) && !emptyBool);
   };
@@ -181,7 +181,7 @@ export default function Submit({ allCourses=[], complete }) {
       term: semester,
       duration: `${duration} min`,
       vimeoId: vimeoId,
-      description: logLine,
+      logLine: logLine,
       inputDirectorList: inputDirectorList,
       inputActorList: inputActorList,
       genreList: genreList,
@@ -189,7 +189,7 @@ export default function Submit({ allCourses=[], complete }) {
       poster: croppedPoster,
       backdrop: croppedBackdrop,
     };
-    const {ok, error} = await complete(submitContent);
+    const { ok, error } = await complete(submitContent);
     if (ok) {
       alert("Submission successful!", router.push("/"));
     }
@@ -305,7 +305,7 @@ export default function Submit({ allCourses=[], complete }) {
         <OptionSelectCard
           title="Directors"
           allowCustom={false}
-          initialOptions={director_names}
+          initialOptions={directorNames}
           selectedOptions={inputDirectorList}
           useDropdown
           onChangeFunction={setDirectorInputList}

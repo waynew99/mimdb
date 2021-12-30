@@ -1,10 +1,10 @@
 //a GET api endpoint that returns a list of courses present in the film data
 
 import nc from "next-connect";
-import { getAllCourses } from "../../../lib/backend-utils";
+import { getAllApprovedCourses } from "../../../lib/backend-utils";
 
 const handler = nc().get(async (req, res) => {
-  const allCourses = await getAllCourses();
+  const allCourses = await getAllApprovedCourses();
 
   if (!allCourses || !Array.isArray(allCourses)) {
     res.status(500).json({

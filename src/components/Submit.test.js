@@ -10,7 +10,7 @@ describe("Submit: Submitter tests", () => {
   const film = {
     title: "sample",
     logLine: "LogLine of the sample film",
-    release_date: "F21",
+    releaseDate: "F21",
     duration: "90",
     vimeoId: "vimeoId",
     overview: "Overview of the sample film"
@@ -42,7 +42,7 @@ describe("Submit: Submitter tests", () => {
       target: { value: film.logLine },
     });
     fireEvent.change(dateEditor, {
-      target: { value: film.release_date },
+      target: { value: film.releaseDate },
     });
     fireEvent.change(durationEditor, {
       target: { value: film.duration },
@@ -62,10 +62,10 @@ describe("Submit: Submitter tests", () => {
     const newFilm = handler.mock.calls[0][0]; // value the handler was called with
 
     expect(newFilm.title).toEqual(film.title);
-    expect(newFilm.overview).toEqual(film.logLine);
-    expect(newFilm.term).toEqual(film.release_date);
+    expect(newFilm.overview).toEqual(film.overview);
+    expect(newFilm.term).toEqual(film.releaseDate);
     expect(newFilm.duration).toEqual(film.duration);
     expect(newFilm.vimeoId).toEqual(film.vimeoId);
-    expect(newFilm.description).toEqual(film.overview);
+    expect(newFilm.logLine).toEqual(film.logLine);
   });
 })

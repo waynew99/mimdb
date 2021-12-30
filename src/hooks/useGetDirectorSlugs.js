@@ -12,7 +12,7 @@ export default function useGetDirectorSlugs(slug) {
       throw new Error(`Unable to fetch director url slugs with film: ${slug}`);
     }
     const slugObjects = await response.json();
-    const slugs = slugObjects.map((slugObject) => slugObject.director_slug);
+    const slugs = slugObjects.map((slugObject) => slugObject.directorSlug);
     setDirectors(slugs);
   }
 

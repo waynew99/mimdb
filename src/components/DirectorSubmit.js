@@ -17,13 +17,13 @@ export default function DirectorSubmit({complete}) {
 
   async function createSubmission() {
     const submitDirector = {
-      director_name: name,
-      director_bio: bio,
-      director_midd_email: middEmail,
-      director_personal_email: personalEmail,
-      director_graduation_year: grad,
-      director_personal_email_is_private: isPersonalEmailPrivate,
-      director_midd_email_is_private: isMiddEmailPrivate
+      directorName: name,
+      directorBio: bio,
+      directorMiddEmail: middEmail,
+      directorPersonalEmail: personalEmail,
+      directorClassYear: grad,
+      directorPersonalEmailIsPrivate: isPersonalEmailPrivate,
+      directorMiddEmailIsPrivate: isMiddEmailPrivate
     };
     const {ok, error} = await complete(submitDirector);
     if (ok){

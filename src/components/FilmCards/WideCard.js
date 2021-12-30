@@ -12,12 +12,12 @@ import { default_grey_svg } from "../../lib/frontend-utils";
 
 export default function WideCard({ film }) {
   //for development builds this poster server will be set to the local public folder in next.js
-  //const poster_path = (film.poster_path) ? `${POSTER_SERVER}${film.poster_path}` : "#";
+  //const posterPath = (film.posterPath) ? `${POSTER_SERVER}${film.posterPath}` : "#";
   //these are temporary paths until we find a storage solution for images
   
   
-  // const {poster_path} = film;
-  // const {backdrop_path} = film;
+  // const {posterPath} = film;
+  // const {backdropPath} = film;
 
   const [poster, setPoster] = useState(default_grey_svg);
   const [backdrop, setBackdrop] = useState(default_grey_svg);
@@ -49,7 +49,7 @@ export default function WideCard({ film }) {
                 </span>
                 <p className={styles.genre}>{(film.genre) ? film.genre.join(", ") : null}</p>
                 <div className={styles.movieDescription}>
-                  <p className={styles.text}>{film.description}</p>
+                  <p className={styles.text}>{film.logLine}</p>
                 </div>
               </div>
             </div>

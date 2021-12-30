@@ -15,14 +15,16 @@ export default function SubmitDirPage() {
         error = new Error(response.statusText);
       }
 
-      return {ok: response.ok, error};
+      return { ok: response.ok, error };
 
     }
     return await postSubmit();
   }
 
   return (
-    <Layout><DirectorSubmit complete={submitDirComplete} /></Layout>
+    <Layout>
+      <DirectorSubmit complete={submitDirComplete} />
+    </Layout>
 
   );
 }
