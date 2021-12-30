@@ -1,16 +1,16 @@
 [![Build Status](https://app.travis-ci.com/csci0312-f21/project-mimdb.svg?token=9FUSzHxaob7ve215Ksba&branch=main)](https://app.travis-ci.com/csci0312-f21/project-mimdb)
+
 ![alt text](./public/mimdb-logo-full.svg)
+
 ## Heroku link
 Visit the deployed application on heroku at https://mimdb.herokuapp.com/
 
 
-This is the starter template for CS312 projects based on Next.js](https://nextjs.org/). _You should replace this portion with a description of your project._
+This is the starter template for CS312 projects based on Next.js](https://nextjs.org/).
 
 The project was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), and includes a number of additional libraries, including the Rest Testing Library, Jest, and ESLint, among others. It also includes the basic configuration for using Travis CI.
 
 To ensure consistent style, this template is also set up with [Prettier](https://github.com/prettier/prettier), with the configuration to automatically reformat code during a commit. That is whenever you commit your code, Prettier will automatically reformat your code during the commit process (as a "hook"). The hook is specified in the `package.json` file.
-
-**Note: I've provided the processes for interacting with this project if you have a local installation. Running on Replit simplifies many of these steps (but not all of them, so please do read through).**
 
 
 ## Getting Started
