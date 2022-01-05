@@ -137,6 +137,21 @@
     font-weight: 500;
 }
 
+.signInButton {
+    display: inline-block;
+    transition: 0.8s;
+    padding-right: 2rem;
+}
+
+.signInButton button {
+    cursor: pointer;
+}
+
+.signInButton:hover {
+    transform: scale(1.05);
+    font: bold;
+}
+
 
 @media screen and (max-width: 840px) {
     .bigScreen{

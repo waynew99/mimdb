@@ -11,7 +11,7 @@ import { useContext } from "react";
 
 export default function Header() {
   const [categoriesOpen, setCategoriesOpen] = useState(false);
-  const {genres, courses} = useContext(GenreCourseContext);
+  const { genres, courses } = useContext(GenreCourseContext);
 
 
   const buttonFunc = () => {
@@ -22,31 +22,37 @@ export default function Header() {
   return (
     <header>
       <div className={styles.navbar}>
+
         <Link href="/" passHref>
           <a className={`${styles.logo} noselect`} draggable={false}>
             <img draggable={false} alt="MIMDB" src="/mimdb-logo-full.svg" />
           </a>
         </Link>
+
         <div className={styles.filter}>
-            <div className={styles.bigScreen}>
-              <div className={styles.fullWidthContainer}>
-                <Category fieldName={"Genre"} fieldList={genres}/>
-                <Category fieldName={"Course"} fieldList={courses}/>
-                <SearchBar />
-              </div>
+
+          <div className={styles.bigScreen}>
+            <Category fieldName={"Genre"} fieldList={genres} />
+            <Category fieldName={"Course"} fieldList={courses} />
+            <SearchBar />
+            <div className={styles.signInButton}>
+              <Link href="/intro" passHref>
+                Sign in / Sign up
+              </Link>
             </div>
+          </div>
 
-
-            <div className={styles.smallScreen}>
-            <SearchBar/>
+          <div className={styles.smallScreen}>
+            <SearchBar />
             <HamburgerButton style={styles.menuButton} select={buttonFunc} />
-                {(categoriesOpen) ? 
-                  <MenuDropDown styleCont={styles.dropDownContainerShow} styleList={styles.dropDownList} />
-                  : 
-                  null}
-            </div>
-            
+            {(categoriesOpen) ?
+              <MenuDropDown styleCont={styles.dropDownContainerShow} styleList={styles.dropDownList} />
+              :
+              null}
+          </div>
+
         </div>
+
       </div>
     </header>
   );

@@ -22,13 +22,13 @@ export default function Category({ fieldName, fieldList, mobile }) {
       </Link>
     ));
   }
-  if(mobile){
-    viewVar=styles.dropdownContainerMobile;
+  if (mobile) {
+    viewVar = styles.dropdownContainerMobile;
   }
-  else{
-    viewVar=styles.dropdownContainer;
+  else {
+    viewVar = styles.dropdownContainer;
   }
-  
+
   return (
     <div className={styles.dropdown}>
       <div className={`${styles.filterCrit} noselect`}>
@@ -38,6 +38,6 @@ export default function Category({ fieldName, fieldList, mobile }) {
         <div className={viewVar}>{uniqueFields}</div>
       </div>
     </div>
-    );
-    
+  );
+
 }
