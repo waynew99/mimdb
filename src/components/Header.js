@@ -8,11 +8,12 @@ import HamburgerButton from "./HamburgerButton";
 import MenuDropDown from "./MenuDropDown";
 import { GenreCourseContext } from "./context/GenreCourseContext";
 import { useContext } from "react";
+import { useSession, signOut } from "next-auth/client";
 
 export default function Header() {
   const [categoriesOpen, setCategoriesOpen] = useState(false);
   const { genres, courses } = useContext(GenreCourseContext);
-
+  const [session] = useSession();
 
   const buttonFunc = () => {
     setCategoriesOpen(!categoriesOpen);
@@ -37,9 +38,10 @@ export default function Header() {
             <SearchBar />
             <div className={styles.signInButton}>
               <Link href="/intro" passHref>
-                Sign in / Sign up
+                {session ? `Welcome ${session.user.name}` : "Sign in / Sign up"}
               </Link>
             </div>
+            {session && <button onClick={signOut}>Sign Out</button>}
           </div>
 
           <div className={styles.smallScreen}>

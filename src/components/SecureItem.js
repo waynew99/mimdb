@@ -20,7 +20,7 @@ export default function SecureItem() {
 
     return (
         <div>
-            <p>{(session) ? `Welcome ${session.user.name}` : "You are not logged in"}</p>
+            <p>{(session) ? `Welcome ${session.user.name}` : "You are not authorized to access this page. Please log in."}</p>
             <p>{`Server message: ${secret}`}</p>
         </div>
     )

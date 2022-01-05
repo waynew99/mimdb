@@ -2,15 +2,17 @@ import Layout from "../../components/Layouts/Layout";
 import AdminPage from "../../components/AdminPage";
 
 import { useEffect, useState } from "react";
+import { useSession } from "next-auth/client";
 
 import LoginWidget from "../../components/LoginWidget";
 import SecureItem from "../../components/SecureItem";
-
+import NotFound from "../../components/NotFound";
 
 
 export default function Admin() {
   const [films, setFilms] = useState([]);
   const [outdated, setOutdated] = useState(true);
+  const [session] = useSession();
 
   // fetch ALL films
   useEffect(() => {
@@ -46,9 +48,12 @@ export default function Admin() {
 
   return (
     <Layout pageTitle="MIMDB | Admin Dashboard">
-      <LoginWidget />
-      <SecureItem />
-      <AdminPage films={films} adminFunc={adminFunc} />
+      {session ? <AdminPage films={films} adminFunc={adminFunc} />
+        : <div>
+          <p>You are not authorized to access this page</p>
+          <NotFound />
+          <br></br>
+        </div>}
     </Layout>
   );
 }

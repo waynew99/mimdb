@@ -3,10 +3,26 @@ $shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
 $box_background: rgb(255, 255, 255, 0.9);
 $border_rad: 0.5rem;
 
-
-.container{
+.wrapper {
+    margin: 2em;
     text-align: center;
     max-width: 950px;
+}
+
+.container {
+    padding-top: 0.1em;
+
+    button {
+        border: none;
+        border-radius: $border_rad;
+        background-color: $box_background;
+        min-height: 3rem;
+        box-shadow: $shadow;
+        width: 11rem;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 0.8em;
+    }
 }
 
 .buttonBar{
@@ -14,16 +30,22 @@ $border_rad: 0.5rem;
     display: inline-block;
 }
 
-.buttonBar p{
-    border-radius: $border_rad;
-    background-color: $box_background;
-    min-height: 3rem;
-    box-shadow: $shadow;
-    width: 12rem;
-    padding: 1rem;
-    cursor: pointer;
+.buttonBar {
+    p{
+        border-radius: $border_rad;
+        background-color: $box_background;
+        min-height: 3rem;
+        box-shadow: $shadow;
+        width: 12rem;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    p:hover{
+        font-weight: 500;
+    }
 }
 
-.buttonBar p:hover{
-    font-weight: 500;
+
+.line {
+    border: 0.1px solid gray;
 }
