@@ -4,8 +4,6 @@ import AdminPage from "../../components/AdminPage";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/client";
 
-import LoginWidget from "../../components/LoginWidget";
-import SecureItem from "../../components/SecureItem";
 import NotFound from "../../components/NotFound";
 
 
