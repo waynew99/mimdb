@@ -176,12 +176,12 @@ describe("Tests of database Film Table utility functions", () => {
             "adminMiddEmail": "jiaqil@middlebury.edu"
         };
 
-        const newAdmin = await addAdmin(testAdmin);
+        const {addsuccess, error} = await addAdmin(testAdmin);
 
-        expect(newAdmin).toBeTruthy();
+        expect(addsuccess).toBeFalsy();
 
         const check = await checkAdmin(testAdmin.adminUserName);
-        expect(check).toBeTruthy();
+        expect(check).toBeFalsy();
     });
 
 });

@@ -12,6 +12,24 @@ export default function Admin() {
   const [outdated, setOutdated] = useState(true);
   const [session] = useSession();
 
+  // // add new admins test
+  // useEffect(() => {
+  //   const newAdminstest = async () => {
+  //     const response = await fetch("/api/admin/submit", {
+  //       method: "POST",
+  //       body: JSON.stringify({ adminUserName: "tester2", adminMiddEmail: "test2@middlebury.edu" }),
+  //       headers: { "Content-Type": "application/json" }
+  //     })
+  //     if (!response.ok) {
+  //       throw new Error(response.statusText);
+  //     }
+  //     const message = await response.json();
+  //     console.log(message);
+
+  //   }
+  //   newAdminstest();
+  // }, [])
+
   // fetch ALL films
   useEffect(() => {
     const getAllFilms = async () => {
@@ -52,6 +70,7 @@ export default function Admin() {
           <NotFound />
           <br></br>
         </div>}
+
     </Layout>
   );
 }

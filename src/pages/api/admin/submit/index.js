@@ -4,7 +4,8 @@ import { checkAdmin, addAdmin } from "../../../../lib/backend-utils";
 
 
 const handler = nc().post(async (req, res) => {
-    const [session] = getSession();
+    const session = await getSession({ req });
+
     if (!session || !await checkAdmin(session.user.name)) {
         res.status(401).json({ // forbidden
             message: "Only logged in administrator can add new administrator"
@@ -13,19 +14,20 @@ const handler = nc().post(async (req, res) => {
     }
 
     const newAdmin = req.body;
-    const { addSuccess, error } = await addAdmin(newAdmin);
+    const { admin, error } = await addAdmin(newAdmin);
+    console.log(admin, error)
     if (error) { // bad request
         res.status(400).json({
             error: error
         });
         return;
     }
-    addSuccess ?
+    admin ?
         res.status(200).json({
-            message: `successfully added admin ${newAdmin.AdminUserName}`
+            message: `successfully added admin ${newAdmin.adminUserName}`
         })
-        :  res.status(500).json({
-            message: `unable to add admin ${newAdmin.AdminUserName}`
+        : res.status(500).json({
+            message: `unable to add admin ${newAdmin.adminUserName}`
         })
     return;
 });

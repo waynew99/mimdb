@@ -11,7 +11,7 @@ const handler = nc().put( async (req, res) => {
 
 
     if (!session) {
-      res.status(403).json({
+      res.status(401).json({
         error: "Only logged in administrator can approve film"
       })
       return;
