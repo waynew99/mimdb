@@ -35,10 +35,15 @@ export default function Introduction() {
 
             <div className={styles.container}>
                 <h2>Administrators</h2>
-                <p>Administrators have the authority to approve and reject films that are displayed on the main page.</p>
+                <p>Administrators have the authority to approve and reject films that are hosted on MIMDB;
+                    Administrators have the authority to add new administrators.
+                </p>
                 <div className={styles.buttonBar}>
                     <Link href="/admin" passHref>
-                        <p>Admin</p>
+                        <p>Authorize Films</p>
+                    </Link>
+                    <Link href="/" passHref>
+                        <p>Authorize Admins</p>
                     </Link>
                 </div>
             </div>

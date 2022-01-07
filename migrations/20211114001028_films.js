@@ -85,6 +85,7 @@ exports.down = function (knex) {
                     .dropTableIfExists("Contributors")
                     .dropTableIfExists("Course")
                     .dropTableIfExists("Directors")
+                    .dropTableIfExists("Admins")
                     .dropTableIfExists("CourseFilm")
                     .dropTableIfExists("DirectorsFilm")
                     .dropTableIfExists("Poster")

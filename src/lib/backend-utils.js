@@ -886,7 +886,7 @@ export async function addDirector(director) {
  */
 export async function checkAdmin(userName) {
   const checkExist = await knex("Admins")
-    .select()
+    .select("AdminUserName")
     .where({ adminUserName: userName });
   return (checkExist !== []);
 }
@@ -898,6 +898,12 @@ export async function checkAdmin(userName) {
  *
  */
 export async function addAdmin(admin) {
-  await knex("Admins").insert(admin);
-  return await checkAdmin(admin.adminUserName);
+
+  if (!admin.adminMiddEmail.endsWith("@middlebury.edu") || !validateEmail(admin.adminMiddEmail)) {
+    error = new Error("admin email is not a valid middlebury email");
+    return { admin: null, error: error };
+  } else {
+    await knex("Admins").insert(admin);
+    return { admin: await checkAdmin(admin.adminUserName), error: error };
+  }
 }
