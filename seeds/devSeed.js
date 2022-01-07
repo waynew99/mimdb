@@ -102,5 +102,5 @@ exports.seed = async function (knex) {
   await knex.batchInsert("Backdrop", backdropMap, 100);
 
   await knex("Admins").del();
-  await knex("Admins").insert([{ adminUserName: "jiaqil", adminMiddEmail: "adminMiddEmail"}]);
+  await knex("Admins").insert([{ adminUserName: "jiaqil", adminMiddEmail: "jiaqil@middlebury.edu"}]);
 };
