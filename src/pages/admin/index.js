@@ -1,76 +1,25 @@
 import Layout from "../../components/Layouts/Layout";
-import AdminPage from "../../components/AdminPage";
-
+import AdminPageAdmins from "../../components/AdminPageAdmins";
 import { useEffect, useState } from "react";
-import { useSession } from "next-auth/client";
-
-import NotFound from "../../components/NotFound";
 
 
-export default function Admin() {
-  const [films, setFilms] = useState([]);
-  const [outdated, setOutdated] = useState(true);
-  const [session] = useSession();
+export default function AddAdmin() {
+    const [users, setUsers] = useState([]);
 
-  // // add new admins test
-  // useEffect(() => {
-  //   const newAdminstest = async () => {
-  //     const response = await fetch("/api/admin/submit", {
-  //       method: "POST",
-  //       body: JSON.stringify({ adminUserName: "tester2", adminMiddEmail: "test2@middlebury.edu" }),
-  //       headers: { "Content-Type": "application/json" }
-  //     })
-  //     if (!response.ok) {
-  //       throw new Error(response.statusText);
-  //     }
-  //     const message = await response.json();
-  //     console.log(message);
-
-  //   }
-  //   newAdminstest();
-  // }, [])
-
-  // fetch ALL films
-  useEffect(() => {
-    const getAllFilms = async () => {
-      const response = await fetch(`/api/films/all`);
-      if (!response.ok) {
-        throw new Error(response.statusText);
-      }
-      const filmData = await response.json();
-      setFilms(filmData);
-    }
-    if (outdated) {
-      getAllFilms();
-    }
-    setOutdated(false);
-  }, [outdated]);
-
-  const adminFunc = (apiCall, film) => {
-    const helper = async () => {
-      if (film) {
-        const response = await fetch(`/api/films/${film.slug}/${apiCall}`, {
-          method: "PUT"
-        })
-
+    // test get all users
+    useEffect(async () => {
+        const response = await fetch("api/users");
+        console.log(response);
         if (!response.ok) {
-          throw new Error(response.statusText)
+            throw new Error(response.statusText);
         }
-        setOutdated(true);
-      }
-    }
-    helper();
-  }
+        const allUsers = await response.json();
+        setUsers(allUsers);
+    }, [])
 
-  return (
-    <Layout pageTitle="MIMDB | Admin Dashboard">
-      {session ? <AdminPage films={films} adminFunc={adminFunc} />
-        : <div>
-          <p>You are not authorized to access this page</p>
-          <NotFound />
-          <br></br>
-        </div>}
-
-    </Layout>
-  );
+    return (
+        <Layout>
+            <AdminPageAdmins users={users} />
+        </Layout>
+    )
 }

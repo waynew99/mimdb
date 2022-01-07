@@ -24,7 +24,8 @@ const options = {
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
-  callbacks: { signIn: signIn }
+  callbacks: { signIn: signIn },
+  database: process.env.DATABASE_URL
 };
 
 export default (req, res) => NextAuth(req, res, options);

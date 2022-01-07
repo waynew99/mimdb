@@ -881,7 +881,7 @@ export async function addDirector(director) {
 /** Check if admin in Admins table by email
  *
  * @param {string} email
- * @returns boolean
+ * @returns an array
  *
  */
 export async function checkAdmin(userName) {
@@ -891,10 +891,10 @@ export async function checkAdmin(userName) {
   return checkExist;
 }
 
-/** Insert admin
+/** Add new admin
  *
  * @param {string} email
- * @returns boolean
+ * @returns object of fields admin and error
  *
  */
 export async function addAdmin(admin) {
@@ -911,4 +911,15 @@ export async function addAdmin(admin) {
     await knex("Admins").insert(admin);
   }
   return { admin: await checkAdmin(admin.adminUserName), error: error };
+}
+
+/** Get all admin accounts
+ *
+ * @returns array of users
+ *
+ */
+
+export async function getAllUsers() {
+  const allUsers = await knex("users").select();
+  return allUsers;
 }

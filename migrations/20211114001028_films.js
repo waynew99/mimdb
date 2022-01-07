@@ -49,8 +49,8 @@ exports.up = function(knex) {
     table.boolean("directorPersonalEmailIsPrivate");
   })
   .createTable("Admins", table => {
-    table.string("adminUserName");
-    table.string("adminMiddEmail");
+    table.string("adminUserName").unique().notNullable();
+    table.string("adminMiddEmail").unique().notNullable();
   })
   .createTable("CourseFilm", table => {
     // Affiliation table for Course and Film, two foreign keys

@@ -39,11 +39,11 @@ export default function Introduction() {
                     Administrators have the authority to add new administrators.
                 </p>
                 <div className={styles.buttonBar}>
-                    <Link href="/admin" passHref>
-                        <p>Authorize Films</p>
+                    <Link href="/admin/films" passHref>
+                        <p>Add Films</p>
                     </Link>
-                    <Link href="/" passHref>
-                        <p>Authorize Admins</p>
+                    <Link href="/admin" passHref>
+                        <p>Add Admins</p>
                     </Link>
                 </div>
             </div>
