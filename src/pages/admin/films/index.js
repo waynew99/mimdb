@@ -70,7 +70,7 @@ export default function Admin() {
         : <div>
           <p>You are not authorized to access this page</p>
           <NotFound />
-          <br></br>
+          <br />
         </div>}
 
     </Layout>

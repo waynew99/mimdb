@@ -50,8 +50,8 @@ exports.up = function(knex) {
 
 exports.down = function(knex) {
   return knex.schema
-    .dropTableIfExists('accounts')
-    .dropTableIfExists('sessions')
-    .dropTableIfExists('users')
-    .dropTableIfExists('verification_requests');
+    .dropTableIfExists("accounts")
+    .dropTableIfExists("sessions")
+    .dropTableIfExists("users")
+    .dropTableIfExists("verification_requests");
 }
