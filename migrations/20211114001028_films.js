@@ -48,6 +48,10 @@ exports.up = function(knex) {
     table.boolean("directorMiddEmailIsPrivate");
     table.boolean("directorPersonalEmailIsPrivate");
   })
+  .createTable("Admins", table => {
+    table.string("adminUserName");
+    table.string("adminMiddEmail");
+  })
   .createTable("CourseFilm", table => {
     // Affiliation table for Course and Film, two foreign keys
     table.integer("filmId");

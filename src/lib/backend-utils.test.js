@@ -15,8 +15,11 @@ import {
     getFilmsByCourse,
     getFilmsByGenre,
     addFilm,
-    updateFilmApproval
+    updateFilmApproval,
+    addAdmin,
+    checkAdmin
 } from "./backend-utils";
+import { check } from "prettier";
 
 describe("Tests of database Film Table utility functions", () => {
     let sampleFilm, allGenres, allCourses, dramaFilms, sightFilms;
@@ -165,6 +168,20 @@ describe("Tests of database Film Table utility functions", () => {
         const updated = await updateFilmApproval("", newFilm.approved);
 
         expect(updated).toBeFalsy();
+    });
+
+    test("addFilm: add admin into Admin database", async () => {
+        const testAdmin = {
+            "adminUserName": "jiaqil",
+            "adminMiddEmail": "jiaqil@middlebury.edu"
+        };
+
+        const newAdmin = await addAdmin(testAdmin);
+
+        expect(newAdmin).toBeTruthy();
+
+        const check = await checkAdmin(testAdmin.adminUserName);
+        expect(check).toBeTruthy();
     });
 
 });

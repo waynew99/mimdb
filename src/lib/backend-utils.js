@@ -155,7 +155,7 @@ export async function getAllApprovedCourses() {
  *
  * @returns an array of all course names for all films in the database
  */
- export async function getAllCourses() {
+export async function getAllCourses() {
   const allCourseEntries = await knex.select("courseName")
     .from("Course")
   return allCourseEntries.map((entry) => entry.courseName);
@@ -361,8 +361,6 @@ export async function getCourseByCourseName(name) {
   return wholeCourse;
 }
 
-//TODO: change this to get by director slug
-
 /** Get director by directorName
  *
  * @param {string} name
@@ -465,6 +463,7 @@ export async function getAllDirectors() {
   return allDirectors.map((entry) => entry.directorName);
 }
 
+
 export function validateFilterTerm(filterTerm) {
   const filters = [
     "genre",
@@ -480,7 +479,7 @@ export function validateFilterTerm(filterTerm) {
 export async function getNextFilmId() {
   const filmId = await knex("Film").max("id");
   if (filmId && filmId[0]) {
-    if (filmId[0].max){
+    if (filmId[0].max) {
       // Production structure
       return filmId[0].max + 1;
     } else if (filmId[0]["max(`id`)"]) {
@@ -877,4 +876,28 @@ export async function processDirector(director) {
 export async function addDirector(director) {
   await knex("Directors").insert(director);
   return await _getFullDirectorBySlug(director.directorSlug);
+}
+
+/** Check if admin in Admins table by email
+ *
+ * @param {string} email
+ * @returns boolean
+ *
+ */
+export async function checkAdmin(userName) {
+  const checkExist = await knex("Admins")
+    .select()
+    .where({ adminUserName: userName });
+  return (checkExist !== []);
+}
+
+/** Insert admin
+ *
+ * @param {string} email
+ * @returns boolean
+ *
+ */
+export async function addAdmin(admin) {
+  await knex("Admins").insert(admin);
+  return await checkAdmin(admin.adminUserName);
 }

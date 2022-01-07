@@ -9,8 +9,7 @@ const handler = nc().put( async (req, res) => {
   const { slug } = req.query;
   const session = await getSession({ req });
 
-  // Testing place holder
-  // TODO: if (!session) {
+
   if (!session) {
     res.status(403).json({
       message: "Only logged in administrator can approve film"
