@@ -16,10 +16,11 @@ export default function AdminPageAdmins({ users, adminFunc }) {
             <th>User Middlebury Email</th>
           </tr>
         </thead>
+        
         <tbody>
           {users.length > 0 && users.map((user) =>
             <tr key={user.id}>
-              <td>{user["idAdmin"]}</td>
+              <td>{user["idAdmin"] ? "Admin" : "User"}</td>
               <td>{user["name"]}</td>
               <td>{user["email"]}</td>
             </tr>
@@ -28,5 +29,4 @@ export default function AdminPageAdmins({ users, adminFunc }) {
       </table>
     </div>
   )
-
 }
