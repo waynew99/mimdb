@@ -27,7 +27,7 @@ export default function AdminPageFilms({ films, adminFunc }) {
         <tbody>
           {films.map((film) =>
             <tr key={film.id}>
-              {//onchange will be updated when merged with the new api calls
+              {
                 film.approved ?
                   <td>
                     <p style={{ color: "green" }}>Approved</p>

@@ -12,7 +12,7 @@ const handler = nc().get(async (req, res) => {
     }
 
     const allUsers = await getAllUsers();
-
+    
     if (!allUsers) {
         res.status(500).json({
             message: "Cannot fetch all users"
