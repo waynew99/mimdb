@@ -67,9 +67,8 @@ export default function Admin() {
         const response = await fetch(`/api/films/${film.slug}/${apiCall}`, {
           method: "PUT"
         })
-
         if (!response.ok) {
-          throw new Error(response.statusText)
+          throw new Error(response.statusText);
         }
         setOutdated(true);
       }

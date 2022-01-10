@@ -2,15 +2,17 @@ import { useState } from "react";
 
 export default function AdminPageAdmins({ users, adminFunc }) {
 
+  
+
   return (
-    <div style={{padding: "4em", paddingTop: "0.2em"}}>
+    <div style={{padding: "4em", paddingTop: "0em"}}>
       <h1>Users of MIMDB</h1>
       <table
         margin="2 auto" fontSize="large" border="1px solid black">
         <thead>
           <tr>
-            <th style={{ padding: "0.3em" }}>Authorize administrator</th>
-            <th style={{ padding: "0.3em" }}>User Name</th>
+            <th style={{ padding: "0.3em" }}>Authorize Administrator</th>
+            <th style={{ padding: "0.3em" }}>Username</th>
             <th style={{ padding: "0.3em" }}>User Middlebury Email</th>
           </tr>
         </thead>
