@@ -7,7 +7,7 @@ const handler = nc().delete(async (req, res) => {
 
     if (!session || !await checkAdmin(session.user.name)) {
         res.status(401).json({ // forbidden
-            message: "Only logged in administrator can delete old administrator"
+            message: "Only logged in administrator can delete existing administrator"
         })
         return;
     }

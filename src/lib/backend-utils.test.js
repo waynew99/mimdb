@@ -17,7 +17,8 @@ import {
     addFilm,
     updateFilmApproval,
     addAdmin,
-    checkAdmin
+    checkAdmin,
+    deleteAdmin
 } from "./backend-utils";
 import { check } from "prettier";
 
@@ -31,7 +32,7 @@ describe("Tests of database Film Table utility functions", () => {
         sampleFilm = sampleFilm.rest;
         // boolean false and true gets turned into 0 and 1 by postgresSQL functions
         sampleFilm.video = sampleFilm.video === false ? 0 : 1;
-        sampleFilm.approved = sampleFilm.approved === false? 0 : 1;
+        sampleFilm.approved = sampleFilm.approved === false ? 0 : 1;
 
         let set = new Set(films.map((film) => film.genre).flat());
         allGenres = [...set];
@@ -150,7 +151,7 @@ describe("Tests of database Film Table utility functions", () => {
 
     });
 
-    test("updateFilmApproval: updates the film", async ()=>{
+    test("updateFilmApproval: updates the film", async () => {
         const newFilm = { ...sampleFilm, approved: 0 };
 
         const updated = await updateFilmApproval(newFilm.slug, newFilm.approved);
@@ -162,7 +163,7 @@ describe("Tests of database Film Table utility functions", () => {
 
     });
 
-    test("updateFilmApproval: returns false on bad id", async ()=>{
+    test("updateFilmApproval: returns false on bad id", async () => {
         const newFilm = { ...sampleFilm, approved: 0 };
 
         const updated = await updateFilmApproval("", newFilm.approved);
@@ -170,15 +171,30 @@ describe("Tests of database Film Table utility functions", () => {
         expect(updated).toBeFalsy();
     });
 
-    test("addFilm: add admin into Admin database", async () => {
+    test.only("addAdmin: add admin into Admin database", async () => {
         const testAdmin = {
             "adminUserName": "jiaqil",
             "adminMiddEmail": "jiaqil@middlebury.edu"
         };
 
-        const {addsuccess, error} = await addAdmin(testAdmin);
+        const { addSuccess, error } = await addAdmin(testAdmin);
 
-        expect(addsuccess).toBeFalsy();
+        expect(addSuccess).toBeFalsy();
+
+        const check = await checkAdmin(testAdmin.adminUserName);
+        expect(check).toBeFalsy();
+    });
+
+    test.only("deleteAdmin: delete admin from Admin database", async () => {
+        const testAdmin = {
+            adminUserName: "jiaqil",
+            adminMiddEmail: "jiaqil@middlebury.edu"
+        };
+
+        const { addSuccess, error } = await addAdmin(testAdmin);
+        expect(addSuccess).toBe("");
+
+        const deleteSuccess = await deleteAdmin("jiaqil");
 
         const check = await checkAdmin(testAdmin.adminUserName);
         expect(check).toBeFalsy();
