@@ -1,0 +1,29 @@
+
+.authorizeButtons {
+    text-align: center;
+    padding: 2em;
+
+    button {
+        cursor: pointer;
+        width: 10em;
+        height: 2em;
+        border-radius: 10px;
+        border: none;
+        font-size: 1em;
+        transition: 0.4s;
+
+        &:disabled {
+            text-decoration: line-through;
+            cursor: not-allowed;
+        }
+        &:hover {
+            background: #dddddd;
+            color: #000;
+        }
+    }
+}
+
+.adminTable {
+    padding: 4em;
+    padding-top: 0.1em;
+}

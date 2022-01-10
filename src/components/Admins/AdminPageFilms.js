@@ -3,9 +3,6 @@ import { useState } from "react";
 
 export default function AdminPageFilms({ films, adminFunc }) {
   const [update, refresh] = useState(true);
-
-  console.log(films[0])
-
   const fields = ["title", "overview", "term", "duration", "genre", "course", "directors", "actors"];
 
   function approvalField(film) {
@@ -22,14 +19,14 @@ export default function AdminPageFilms({ films, adminFunc }) {
   }
 
   return (
-    <div style={{ padding: "4em" }}>
+    <div style={{padding: "4em", paddingTop: "0.2em"}}>
       <h1>Films in the MIMDB Database</h1>
       <table
         margin="2 auto" fontSize="large" border="1px solid black">
         <thead>
           <tr>
             <th>approved</th>
-            {fields.map((field) => <th>{field}</th>)}
+            {fields.map((field) => <th key={field} style={{ padding: "0.3em" }}>{field}</th>)}
           </tr>
         </thead>
 
@@ -41,7 +38,7 @@ export default function AdminPageFilms({ films, adminFunc }) {
                 if (typeof film[field] === "object") {
                   return <td key={field} style={{ padding: "0.3em" }}>{film[field].join(", ")}</td>
                 } else {
-                  return <td key={field} style={{ padding: "0.1em" }}>{film[field]}</td>
+                  return <td key={field} style={{ padding: "0.3em" }}>{film[field]}</td>
                 }
               })}
             </tr>

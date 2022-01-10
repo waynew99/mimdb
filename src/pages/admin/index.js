@@ -1,6 +1,6 @@
 import Layout from "../../components/Layouts/Layout";
-import AdminPageFilms from "../../components/AdminPageFilms";
-import AdminPageAdmin from "../../components/AdminPageAdmins";
+import AdminPageFilms from "../../components/Admins/AdminPageFilms";
+import AdminPageAdmin from "../../components/Admins/AdminPageAdmins";
 import NotFound from "../../components/NotFound";
 
 import { useEffect, useState } from "react";
@@ -54,7 +54,6 @@ export default function Admin() {
   // get all users
   useEffect(async () => {
     const response = await fetch("api/users");
-    console.log(response);
     if (!response.ok) {
       throw new Error(response.statusText);
     }
