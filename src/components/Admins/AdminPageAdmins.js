@@ -1,8 +1,21 @@
 import { useState } from "react";
 
 export default function AdminPageAdmins({ users, adminFunc }) {
+  const [update, setUpdate] = useState(true);
 
-  
+  // function approvalField(user) {
+  //   const [status1, status2, status3] = film.approved ?
+  //     ["Approved", "reject", "Reject"] : ["Not approved", "approve", "Approve"];
+  //   return (
+  //     <td style={{ padding: "0.2em", textAlign: "center" }}>
+  //       <p style={{ color: "green" }}>{status1}</p>
+  //       <button
+  //         onClick={() => { adminFunc(status2, user); refresh(!update) }}>
+  //         {status3}
+  //       </button>
+  //     </td>
+  //   )
+  // }
 
   return (
     <div style={{padding: "4em", paddingTop: "0em"}}>

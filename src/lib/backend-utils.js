@@ -10,6 +10,7 @@ import process from "process";
 
 import knexConfig from "../../knexfile";
 import knexInitializer from "knex";
+import { check } from "prettier";
 
 export const knex = knexInitializer(
   knexConfig[process.env.NODE_ENV || "development"]
@@ -893,7 +894,7 @@ export async function checkAdmin(userName) {
 
 /** Add new admin
  *
- * @param {string} email
+ * @param {string} object
  * @returns object of fields admin and error
  *
  */
@@ -911,6 +912,17 @@ export async function addAdmin(admin) {
     await knex("Admins").insert(admin);
   }
   return { admin: await checkAdmin(admin.adminUserName), error: error };
+}
+
+/** Delete admin
+ *
+ * @param {string} admin
+ * @returns object of fields admin and error
+ *
+ */
+export async function deleteAdmin(userName) {
+  await knex("Admins").where("adminUserName", userName).del();
+  return await checkAdmin(userName) === false;
 }
 
 /** Get all admin accounts

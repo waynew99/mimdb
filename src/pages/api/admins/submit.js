@@ -1,6 +1,6 @@
 import nc from "next-connect";
 import { getSession } from "next-auth/client";
-import { checkAdmin, addAdmin } from "../../../../lib/backend-utils";
+import { checkAdmin, addAdmin } from "../../../lib/backend-utils";
 
 
 const handler = nc().post(async (req, res) => {
@@ -31,6 +31,5 @@ const handler = nc().post(async (req, res) => {
         })
     return;
 });
-
 
 export default handler;
